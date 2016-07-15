@@ -17,20 +17,15 @@ function getById() {
     }
     $.getJSON({
         url: "http://localhost:8090/remote/item/" + id,
-        //dataType: 'json',
         success: successCallback
-    })//.success(successCallback)
-        .done(function(result) {
+    }).done(function(result) {
             console.log('done data:');
             console.log(result);
-
         }).fail(function(result) {
             console.log("fail result:")
             console.log(result);
         }).always(function() {
             console.log("always")
         })
-    $("#item-info")
-
 }
 
