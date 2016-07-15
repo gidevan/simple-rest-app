@@ -13,9 +13,13 @@ function getById() {
     var successCallback = function(result) {
         console.log('success result:');
         console.log(result);
-        $("#item").html("<div><p>ID: </p><p>" + result.id + "</p><div>" + "<div><p>name: </p><p>" + result.name + "</p><div>" + "<div><p>Description: </p><p>" + result.description + "</p><div>")
+        $("#item-info").html("<div><p>ID: </p><p>" + result.id + "</p><div>" + "<div><p>name: </p><p>" + result.name + "</p><div>" + "<div><p>Description: </p><p>" + result.description + "</p><div>")
     }
-    $.get("http://localhost:8080/item/" + id, successCallback)
+    $.getJSON({
+        url: "http://localhost:8090/remote/item/" + id,
+        //dataType: 'json',
+        success: successCallback
+    })//.success(successCallback)
         .done(function(result) {
             console.log('done data:');
             console.log(result);
