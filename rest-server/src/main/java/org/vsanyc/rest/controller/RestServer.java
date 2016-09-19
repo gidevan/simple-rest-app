@@ -1,6 +1,7 @@
 package org.vsanyc.rest.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,6 +22,7 @@ public class RestServer {
         return itemService.getItems();
     }
 
+    @CrossOrigin("http://localhost:8080")
     @RequestMapping("/hello")
     public String hello() {
         return "Simple rest server is started";
