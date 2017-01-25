@@ -1,5 +1,30 @@
 <template>
-  Item list.
-  ${message}
-  will be implemented.
+    <h1>Local application Item list.</h1>
+    <div class="item-list">
+        <div repeat.for="item of localItems" class="item">
+            <div class="item-info">
+                <span>id:</span> ${item.id}
+            </div>
+            <div class="item-info">
+                <span>name:</span> ${item.name}
+            </div>
+            <div class="item-info">
+                <span>description:</span> ${item.description}
+            </div>
+        </div>
+    </div>
+    <h1>Remote application Item list.</h1>
+    <div class="item-list">
+        <div repeat.for="item of remoteItems" class="item">
+            <div class="item-info">
+                <span>id:</span> ${item.id}
+            </div>
+            <div class="item-info">
+                <span>name:</span> ${item.name}
+            </div>
+            <div class="item-info">
+                <span>description:</span> ${item.description}
+            </div>
+        </div>
+    </div>
 </template>

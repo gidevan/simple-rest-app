@@ -1,0 +1,8 @@
+.item-list .item {
+  border: 1px solid black;
+  margin: 1px;
+}
+
+.item-list .item .item-info.span {
+  font-weight: bolder;
+}
